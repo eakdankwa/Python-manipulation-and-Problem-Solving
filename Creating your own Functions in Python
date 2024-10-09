@@ -14,3 +14,38 @@ def number_generator(n):
     return empty_list    
 new_list = number_generator(15)
 print(new_list)
+
+
+# Question 2:
+def reverse_string(text):
+    return text[::-1]
+
+    
+def sentence_word(sentence):
+    split_words = sentence.split()
+    empty_list = []
+    for word in split_words:
+        reverse_string(word)
+        empty_list.append(reverse_string(word))
+    return ' '.join(empty_list)
+    
+user = input("Enter a sentence here: ")
+print(user)
+print(sentence_word(user))
+
+
+# Question 3:
+def prime_checker(number):
+    if number < 2:
+        return f'{number} is not a prime number'
+
+    for i in  range(2,number):
+        if  (number % i == 0):
+            return f'{number} is not a prime number'
+    
+    else:
+        return f'{number} is a prime number'
+    
+user = int(input("Enter any positive integer number: "))
+print(prime_checker(user))
+
