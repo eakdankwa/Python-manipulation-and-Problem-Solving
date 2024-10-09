@@ -1,0 +1,16 @@
+# Question 1:
+
+def number_generator(n):
+    empty_list = []
+    for num in range(1, n+1):
+        if (num % 3 == 0) and (num % 5 == 0):
+            empty_list.append('FizzBuzz')
+        elif num % 3 == 0:
+            empty_list.append('Fizz')
+        elif num % 5 == 0:
+            empty_list.append('Buzz')
+        else:
+            empty_list.append(num)
+    return empty_list    
+new_list = number_generator(15)
+print(new_list)
